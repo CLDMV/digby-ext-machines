@@ -1,0 +1,29 @@
+{
+	"name": "@cldmv/digby-ext-machines",
+	"version": "0.0.1",
+	"description": "Machines — built on @cldmv/rummage.",
+	"type": "module",
+	"license": "Apache-2.0",
+	"author": { "name": "Shinrai", "company": "CLDMV", "email": "git+npm@cldmv.net", "url": "https://cldmv.net" },
+	"contributors": [{ "name": "CLDMV", "url": "https://github.com/CLDMV" }],
+	"funding": { "type": "github", "url": "https://github.com/sponsors/shinrai" },
+	"publishConfig": { "access": "public" },
+	"sideEffects": false,
+	"engines": { "node": ">=22.5.0" },
+	"repository": { "type": "git", "url": "git+https://github.com/CLDMV/digby-ext-machines.git" },
+	"bugs": { "url": "https://github.com/CLDMV/digby-ext-machines/issues" },
+	"homepage": "https://github.com/CLDMV/digby-ext-machines#readme",
+	"main": "./src/api/machines/machines.mjs",
+	"exports": {
+		".": "./src/api/machines/machines.mjs",
+		"./api": "./src/api/machines/machines.mjs",
+		"./view": "./src/view/machines/machines.mjs",
+		"./package.json": "./package.json"
+	},
+	"files": ["src/", "sql/", "docs/", "rummage.manifest.mjs", "LICENSE", "README.md"],
+	"scripts": {
+		"generate": "rummage generate",
+		"generate:check": "rummage check"
+	},
+	"peerDependencies": { "@cldmv/rummage": "^0.1.359" }
+}
